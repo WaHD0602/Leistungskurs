@@ -7,7 +7,7 @@ public class Haendler {
         int anzahlNormal = baba.nextInt();
         System.out.println("Wie viele Mini SD-Karten möchten sie?");
         int anzahlMini = baba.nextInt();
-        System.out.println("Wie viele Micro SD-Karten möchten sie?"); //todo wie auch überall davor einfach den wert durch eine Scanner abfrage ersetzen
+        System.out.println("Wie viele Micro SD-Karten möchten sie?"); //todo gleiche wie amiibo darf nicht negativ sein wegen geschenk
         int anzahlMicro = baba.nextInt();
         double normalsd = 5;
         double minisd = 8;
