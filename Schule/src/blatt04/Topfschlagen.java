@@ -40,6 +40,7 @@ public class Topfschlagen {
             }
 
             if //ich brauche einen alten und neuen abstand um näher zu kommen um warm oder kalt auszugeben
+            //berechne und vergleiche alten Abstand vs neuen Abstand. kleiner => wärmer; größer => kälter
         }
         System.out.println("Du hast Gewonnen");
     }
