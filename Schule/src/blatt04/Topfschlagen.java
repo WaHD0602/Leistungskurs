@@ -18,7 +18,7 @@ public class Topfschlagen {
                 break;
             }
             System.out.println("Wohin möchtest du gehen steuere mt WASD");
-            char steuerung = baba.next().charAt(0);
+            char steuerung = baba.next().toUpperCase().charAt(0);
             if (steuerung == 'W') {
                 playerY = playerY + 1;
             }
