@@ -10,6 +10,8 @@ public class Topfschlagen {
         int topfY = new Random().nextInt(5) + 1;
         int playerX = 3;
         int playerY = 3;
+        int abstandAlt = 0;
+        int abstandNeu = 0;
 
         while (true) {
             if (topfX == playerX && topfY == playerY) {
