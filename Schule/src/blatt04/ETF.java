@@ -15,7 +15,7 @@ public class ETF {
         int monat = 0;
         double anteil = 0;
 
-        System.out.println("Wie viele Jahre möchten sie Sparen");
+        System.out.println("Wie viele Jahre möchten Sie Sparen bzw ETF kaufen?");
         int jahre = baba.nextInt(); //dauer der käufe in die aktie
 
         while (true) { //unendliche käufe da es ja von der spanne der zeit beendet wird
@@ -26,7 +26,7 @@ public class ETF {
                 break; //beenden wenn ich meine dauer erreicht habe
             }
 
-            System.out.println("Wie viel möchten Sie dieses Jahr Einzahlen?");
+            System.out.println("Wie viel möchten Sie dieses Jahr Einzahlen? (monatlich)");
             double sparbetrag = baba.nextInt(); //jährliche abfrage für die planung des jahres
             while (monat < 12) {
                 gesamt = gesamt + sparbetrag;
