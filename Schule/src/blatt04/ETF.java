@@ -40,8 +40,10 @@ public class ETF {
                 gesamt = gesamt * zinssatz;
                 anteil = gesamt / wert;
                 monat++;
-                System.out.printf("Jahr %d,\tMonat %d,\tSparbetrag %.2f€,\tZinssatz %.2f,\tKontostand %.2f€,\t\tMSCI-Anteile %.2f%n", jahr, monat, sparbetrag, (zinssatz-1)*100, gesamt , anteil); //finale ausgabe der einnahmen in diesem jahr
-            }                                                                                               //ich bin mir nicht sicher wie ich das problem mit der zeilverschiebung beheben kann
+                System.out.printf("Jahr %d,\tMonat %d,\tSparbetrag %.2f€,\tZinssatz %.2f%%,\tKontostand %.2f€,\t\tMSCI-Anteile %.2f%%%n", jahr, monat, sparbetrag, (zinssatz-1)*100, gesamt , anteil); //finale ausgabe der einnahmen in diesem jahr
+            }                                       //ich habe im internet gekuckt wegen %% das hat mich genervt              // ich bin mir nicht sicher wie ich das problem mit der zeilverschiebung beheben kann
+                                                // hat es schlimmer gemacht mit den zeilen verschiebung aber gefiel mir
+
             monat = 0; //zurücksetzen der monate damit es wieder die jahre durchgehen kann
             jahr++; //damit es auch enden kann
         }
