@@ -28,6 +28,12 @@ public class ETF {
 
             System.out.println("Wie viel möchten Sie dieses Jahr Einzahlen? (monatlich)");
             double sparbetrag = baba.nextInt(); //jährliche abfrage für die planung des jahres
+
+            if (jahre < 0 || sparbetrag < 0) {
+                System.out.println("Sie können keine negativen Werte eingeben!");
+                System.exit(0);
+            }
+
             while (monat < 12) {
                 gesamt = gesamt + sparbetrag;
                 double zinssatz = random.nextDouble(1.06,1.12); //random zinssatz
