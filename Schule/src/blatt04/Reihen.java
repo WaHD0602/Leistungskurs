@@ -13,7 +13,7 @@ public class Reihen {
             System.exit(0);
         }
 
-        // ===== Reihe 1 =====
+        //Reihe 1
         System.out.print("Reihe 1: ");
         int reihe1 = 1; //grundwert
         int zaehler1 = 0; //zähler für die anzahl
@@ -26,7 +26,7 @@ public class Reihen {
         }
         System.out.println();
 
-        // ===== Reihe 2 =====
+        //Reihe 3
         System.out.print("Reihe 2: ");
         int zahl2 = 2;
         int zaehler2 = 0;
@@ -39,7 +39,7 @@ public class Reihen {
         }
         System.out.println();
 
-        // ===== Reihe 3 =====
+        //Reihe 3
         System.out.print("Reihe 3: ");
         int zahl3 = 1;
         int zaehler3 = 0;
@@ -52,14 +52,14 @@ public class Reihen {
         }
         System.out.println();
 
-        // ===== Reihe 4 =====
+        //Reihe 4
         System.out.print("Reihe 4: ");
         int zahl4 = 1;
         int zaehler4 = 0;
 
         while (zaehler4 < anzahl) {
             System.out.print(zahl4 + " ");
-            zaehler4 = zaehler4 + 1;
+            zaehler4++;
 
             if (zaehler4 < anzahl) {
                 System.out.print((-zahl4) + " ");

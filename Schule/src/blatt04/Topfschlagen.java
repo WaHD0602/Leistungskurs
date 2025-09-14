@@ -35,16 +35,29 @@ public class Topfschlagen {
             //errechnung des abstands
             if (abstandAlt > abstandNeu) {
                 System.out.println("Warm");
-            }
-            else if (abstandAlt < abstandNeu) {
+            } else if (abstandAlt < abstandNeu) {
                 System.out.println("Kalt");
-            }
-            else System.out.println("Lauwarm");
+            } else System.out.println("Lauwarm");
+
+            System.out.println("Du befindest dich auf (" + playerX + "|" + playerY + ")");
 
             abstandAlt = abstandNeu; //reseten des abstands
 
-            if (playerX > 5 || playerY > 5) {
-                System.out.println("Gehe wieder zurück dieses Topfschlagen ist nur im 5x5");
+            if (playerX < 0) {
+                System.out.println("Du kannst das 5x5 Grid nicht verlassen! Du wurdest wieder auf deine Alte Position zurückgesetzt.");
+                playerX = 0;
+            } else if (playerX > 5) {
+                System.out.println("Du kannst das 5x5 Grid nicht verlassen! Du wurdest wieder auf deine Alte Position zurückgesetzt.");
+                playerX = 5;
+            }
+            //ich frage ob auf welcher seite x raus geht um ihn so richtig zurückzusetzen
+
+            if (playerY < 0) {
+                System.out.println("Du kannst das 5x5 Grid nicht verlassen! Du wurdest wieder auf deine Alte Position zurückgesetzt.");
+                playerY = 0;
+            } else if (playerY > 5) {
+                System.out.println("Du kannst das 5x5 Grid nicht verlassen! Du wurdest wieder auf deine Alte Position zurückgesetzt.");
+                playerY = 5;
             }
         }
         System.out.println("Du hast Gewonnen");
