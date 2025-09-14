@@ -10,8 +10,7 @@ public class Topfschlagen {
         int topfY = new Random().nextInt(5) + 1;
         int playerX = 3;
         int playerY = 3;
-        int abstandAlt = 0;
-        int abstandNeu = 0;
+        int abstandAlt = topfX - playerX + topfY - playerY;
 
         while (true) {
             if (topfX == playerX && topfY == playerY) {
@@ -31,17 +30,24 @@ public class Topfschlagen {
             if (steuerung == 'D') {
                 playerX = playerX + 1;
             }
-            //jetzt wärmer kälter
 
-            if (playerX < topfX) {
-                System.out.println("Kalt");
-            } else if (playerX > topfX) {
+            int abstandNeu = topfX - playerX + topfY - playerY;
+
+            if (abstandAlt > abstandNeu) {
                 System.out.println("Warm");
             }
+            else if (abstandAlt < abstandNeu) {
+                System.out.println("Kalt");
+            }
+            else System.out.println("Lauwarm");
 
-           // if ich brauche einen alten und neuen abstand um näher zu kommen um warm oder kalt auszugeben
-            //berechne und vergleiche alten Abstand vs neuen Abstand. kleiner => wärmer; größer => kälter
+            abstandNeu = abstandAlt;
+            System.out.println(topfX + " " + topfY + " " + playerX + " " + playerY);
+
+            // if ich brauche einen alten und neuen abstand um näher zu kommen um warm oder kalt auszugeben
+            // berechne und vergleiche alten Abstand vs neuen Abstand. kleiner => wärmer; größer => kälter
         }
+
         System.out.println("Du hast Gewonnen");
     }
 }
