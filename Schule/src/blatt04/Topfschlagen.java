@@ -10,7 +10,7 @@ public class Topfschlagen {
         int topfY = new Random().nextInt(5) + 1;
         int playerX = 3;
         int playerY = 3;
-        int abstandAlt = topfX - playerX + topfY - playerY;
+        int abstandAlt = Math.abs(topfX - playerX) + Math.abs(topfY - playerY);
 
         while (true) {
             if (topfX == playerX && topfY == playerY) {
@@ -31,8 +31,8 @@ public class Topfschlagen {
                 playerX = playerX + 1;
             }
 
-            int abstandNeu = topfX - playerX + topfY - playerY;
-
+            int abstandNeu = Math.abs(topfX - playerX) + Math.abs(topfY - playerY);
+            //errechnung des abstands
             if (abstandAlt > abstandNeu) {
                 System.out.println("Warm");
             }
@@ -41,13 +41,12 @@ public class Topfschlagen {
             }
             else System.out.println("Lauwarm");
 
-            abstandNeu = abstandAlt;
-            System.out.println(topfX + " " + topfY + " " + playerX + " " + playerY);
+            abstandAlt = abstandNeu; //reseten des abstands
 
-            // if ich brauche einen alten und neuen abstand um näher zu kommen um warm oder kalt auszugeben
-            // berechne und vergleiche alten Abstand vs neuen Abstand. kleiner => wärmer; größer => kälter
+            if (playerX > 5 || playerY > 5) {
+                System.out.println("Gehe wieder zurück dieses Topfschlagen ist nur im 5x5");
+            }
         }
-
         System.out.println("Du hast Gewonnen");
     }
 }
