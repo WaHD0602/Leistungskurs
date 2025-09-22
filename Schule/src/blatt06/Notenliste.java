@@ -1,5 +1,5 @@
 package blatt06;
-import java.util.Scanner
+import java.util.Scanner;
 public class Notenliste {
     public static void main(String[] args) {
         Scanner baba = new Scanner(System.in);
@@ -8,11 +8,12 @@ public class Notenliste {
 
         int[] noten = new int[schuelerAnzahl];
         for (int i = 0; i < schuelerAnzahl; i++) {
-
+            System.out.println("Gib eine Note ein");
+            noten[i] = baba.nextInt();
         }
-    }
-
         for (int i = 0; i <= noten.length - 1; i++) {
             System.out.println("Note von Index " + i + ": " + noten[i]);
+    }
+
     }
 }
