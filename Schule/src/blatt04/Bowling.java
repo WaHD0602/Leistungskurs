@@ -36,7 +36,7 @@ public class Bowling {
             }
             ergebnis = pins + pins2 * multiplikator;
             System.out.println("Du hast " + pins + " + " + pins2 + " = " + ergebnis);
-            multiplikator = 1; //NOah du süßer <3
+            multiplikator = 1;
         }
         System.out.println("Du hast " + ergebnis + " Punkte");
     }
