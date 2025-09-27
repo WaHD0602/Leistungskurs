@@ -1,6 +1,6 @@
 package blatt06;
 import java.util.Scanner;
-public class Wertetabelle {
+public class  Wertetabelle {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in); //baba ist besserer name
         int y = 0;
