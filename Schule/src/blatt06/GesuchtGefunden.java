@@ -27,5 +27,15 @@ public class GesuchtGefunden {
         }
         System.out.println("Der Gesamtwert aller Elemente der Arrays ist: " + gesamt);
 
+        double kleinstePaardifferenz = arr[1] - arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            double differenz = arr[i] - arr[i - 1];
+            if (differenz < kleinstePaardifferenz) {
+                kleinstePaardifferenz = differenz;
+            }
+        }
+
+        System.out.println("Kleinste Paardifferenz: " + kleinstePaardifferenz);
     }
 }
