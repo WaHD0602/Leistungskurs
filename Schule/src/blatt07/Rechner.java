@@ -1,4 +1,4 @@
-package Blatt07;
+package blatt07;
 
 public class Rechner {
     /**
@@ -40,10 +40,6 @@ public class Rechner {
     public static double div (double a, double b) {
         return a / b;
     }
-
-
-
-
 
     /**
      * Eine Rechnung von den verschieden Ergebnisen der rechnungsmöglichkeiten in form einer Methode

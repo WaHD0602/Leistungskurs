@@ -13,7 +13,5 @@ public class  Wertetabelle {
         for (int i = 0; i < coeff.length; i++) {
             coeff[i] = sc.nextDouble();
         }
-
-
     }
 }
