@@ -122,11 +122,14 @@ public class ArbeitMitArrays {
         return ergebnis;
     }
 
+    /*
     public static void shiftLeft(int[] arrint) {
         for (int i = 0; i < arrint .length; i++) {
             arrint
         }
     }
+
+     */
 
     public static void main(String[] args) {
 
