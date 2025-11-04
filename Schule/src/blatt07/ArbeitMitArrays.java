@@ -122,23 +122,21 @@ public class ArbeitMitArrays {
         return ergebnis;
     }
 
-    /*
-    public static void shiftLeft(int[] arrint) {
-        for (int i = 0; i < arrint .length; i++) {
-            arrint
+    public static void shiftLeft(int[] arr) {
+        int a = arr[0];
+        for (int i = 0; i < arr.length-1; i++) {
+            arr[i] = arr[i+1];
         }
+        arr[arr.length-1] = a;
+        printArray(arr);
     }
 
-     */
+
+
 
     public static void main(String[] args) {
 
-        String[] test = {"Schisch", "Mämpel", "Klupsch" };
-        double[] test2 = {1.0, 2.0, 3.0, 4.0};
-        boolean[] test3 = {true, true, true, true, true};
-        char[] test4 = {'A', 'B', 'C', 'D'};
-        int[] test5 = {1, 2, 3, 4};
-        int[] test6 = {1, 2, 3, 4 , 5};
-        addieren(test5, test6);
+        int[] arrint = new int[]{10, 2 , 3, 4 ,5 ,6 ,7 ,8 ,9};
+        shiftLeft(arrint);
     }
 }
