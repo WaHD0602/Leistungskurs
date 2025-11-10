@@ -131,6 +131,15 @@ public class ArbeitMitArrays {
         printArray(arr);
     }
 
+    public static void shiftRight(int[] arr) {
+        int a = arr[0];
+        for (int i = arr.length-1; i < 0; i--) {
+            arr[i] = arr[i-1];
+        }
+        arr[arr.length-1] = a;
+        printArray(arr);
+    }
+
 
 
 
@@ -138,5 +147,6 @@ public class ArbeitMitArrays {
 
         int[] arrint = new int[]{10, 2 , 3, 4 ,5 ,6 ,7 ,8 ,9};
         shiftLeft(arrint);
+        shiftRight(arrint);
     }
 }
