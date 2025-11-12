@@ -2,7 +2,9 @@ package blatt07;
 
 public class Stein {
 
+    /*
     public static int steinGGT(int a,int b) {
+
         int count = 0;
         while(a != 0 || b != 0) {
             if (a % 2 == 0 && b % 2 == 0) {
@@ -23,7 +25,7 @@ public class Stein {
             return a;
         }
 
-    }
+     */
 
     public static void main(String[] args) {
          int a = 55;
