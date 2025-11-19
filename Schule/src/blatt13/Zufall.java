@@ -4,7 +4,7 @@ package blatt13;
 public class Zufall {
 
     public static double zufall(int b) {
-        return Math.random() * b;
+        return (Math.random() * b);
     }
 
     public static int zufallGanz(int b) {
@@ -12,11 +12,11 @@ public class Zufall {
     }
 
     public static double zufall(int a, int b) {
-        return (Math.random() + a) * b;
+        return (Math.random() * (b-a) + a);
     }
 
     public static int zufallGanz(int a, int b) {
-        return (int)((Math.random() + a) * (b+1));
+        return (int)(Math.random() * (b-a) + (a));
     }
 
     public static int[] zufallArray (int l, int a, int b) {
@@ -28,6 +28,7 @@ public class Zufall {
     }
 
     public static void main(String[] args) {
-
+        System.out.println(zufall(100, 101));
+        blatt07.ArbeitMitArrays.printArray(zufallArray(5, 5, 10));
     }
 }
