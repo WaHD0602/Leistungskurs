@@ -2,33 +2,42 @@ package blatt07;
 
 public class Stein {
 
-    /*
-    public static int steinGGT(int a,int b) {
+    public static int steinGGT(int a, int b) {
+        if (a == 0) return b;
+        if (b == 0) return a;
 
-        int count = 0;
-        while(a != 0 || b != 0) {
+        int k = 0;
+
+        while (a != 0 && b != 0) {
+
             if (a % 2 == 0 && b % 2 == 0) {
                 a /= 2;
                 b /= 2;
-                count++;
-            } else if (a % 2 == 0) {
+                k++;
+            }
+
+            else if (a % 2 == 0) {
                 a /= 2;
-            } else if (b % 2 == 0) {
+            }
+            else if (b % 2 == 0) {
                 b /= 2;
-            } else {
-                if (a <= b) {
-                    b = (b - a) /2;
-                } else a = (a - b) /2;
+            }
+
+            else {
+                if (a > b) {
+                    a = (a - b) / 2;
+                } else {
+                    b = (b - a) / 2;
+                }
             }
         }
-        if (a > b) {
-            return a;
-        }
 
-     */
+        int rest = (a == 0) ? b : a;
+
+        return rest * (int)Math.pow(2, k);
+    }
 
     public static void main(String[] args) {
-         int a = 55;
-         int b = 22;
+        System.out.println(steinGGT(48, 18)); // sollte 6 ergeben
     }
 }
