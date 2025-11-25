@@ -31,5 +31,8 @@ public class BubbleSort {
         bubbleSort(arr);
         blatt07.ArbeitMitArrays.printArray(arr);
         blatt07.ArbeitMitArrays.istSortiert(arr);
+
+        //O-Notation: n²
+        //Aufgabe 2) e)   wenn ich sortiere kann ich auch gleich alles durchgehen mit swap da das überprüfen des arrays gefühlt genauso lange dauert nach jedem swap
     }
 }
