@@ -15,6 +15,12 @@ public class MultiArrays {
         }
     }
 
+    public static void print2DArray(char[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            blatt07.ArbeitMitArrays.printArray(arr[i]);
+        }
+    }
+
     public static int[][] createRandom2DIntArray(int a, int b, int p, int q) {
         if (a <= 0 || b<= 0) {
             return null;
@@ -43,12 +49,53 @@ public class MultiArrays {
         }
     }
 
+    public static char[][] createEmpty2DCharArray(int a, int b) {
+        char[][] arr = new char[a][b];
+        for (int i = 0; i < arr.length ; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[i][j] = ' ';
+            }
+        }
+        return arr;
+    }
 
+    public static boolean istIdentisch(char[][] arr1, char[][] arr2) {
+        if (arr1.length != arr2.length) {
+            return false;
+        }
+
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i].length != arr2[i].length) {
+                return false;
+            }
+        }
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr1[i].length; j++) {
+                if (arr1[i][j] != arr2[i][j]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public static char[][] copy2DCharArray(char[][] arr) {
+        char[][] arr2 = arr;
+        print2DArray(arr2);
+        return arr2;
+    }
+
+    public static void shiftRows(int[][] arr, int[][] arr2) {
+
+    }
 
 
     public static void main(String[] args) {
-        int[][] arr = new int[][] {new int[] {3,5,6,7}, new int[] {6,7,67,4}, new int[] {9,1,2,3}, new int[] {1,2,3,4}};
-        print2DArray(arr);
+
+        int[][] arr0 = new int[][] {new int[] {3,5,6,7}, new int[] {6,7,67,4}, new int[] {9,1,2,3}, new int[] {1,2,3,4}};
+        print2DArray(arr0);
+        char[][] arr = createEmpty2DCharArray(5,6);
+        copy2DCharArray(arr);
     }
 }
 

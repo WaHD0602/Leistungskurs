@@ -1,6 +1,8 @@
 <component name="libraryTable">
   <library name="schisch_visualizer_neo">
-    <CLASSES />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Schule/schisch_visualizer_neo.jar!/" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES />
   </library>
