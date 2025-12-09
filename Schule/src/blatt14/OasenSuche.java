@@ -28,15 +28,20 @@ public class OasenSuche {
     }
 
 
+    public static void findeWasser() {
+
+    }
+
+
 
     public static void main(String[] args) {
         SchischVisualizer sv = new SchischVisualizer();
-        initialisiereSpielfeld(20,20);
+        initialisiereSpielfeld(60,60);
         zufallsPositionSpieler();
         sv.step(spielfeld);
-        wasserZufall(0.1);
+        wasserZufall(0.03);
         sv.step(spielfeld);
-        steinZufall(0.3);
+        steinZufall(0.15);
         sv.step(spielfeld);
         sv.start();
     }
