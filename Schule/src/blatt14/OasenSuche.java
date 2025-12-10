@@ -12,7 +12,7 @@ public class OasenSuche {
     }
 
     public static void zufallsPositionSpieler() {
-        Simulationen.platzieren(spielfeld,'O',true);
+        Simulationen.platzieren(spielfeld,'P',true);
     }
 
     public static void wasserZufall(double ws) {
@@ -28,8 +28,23 @@ public class OasenSuche {
     }
 
 
-    public static void findeWasser() {
+    public static int[] findeSpieler() {
+        for (int i = 0; i < spielfeld.length; i++) {
+            for (int j = 0; j < spielfeld[i].length; j++) {
+                if (spielfeld[i][j] == 'P') {
+                    return new int[]{i,j};
+                }
+            }
+        }
+        return null;
+    }
 
+    public static void findeWasser() {
+        //zufallswert von 1-4
+        int zufall = blatt13.Zufall.zufallGanz(1, 5);
+        if (zufall == 1) {
+
+        }
     }
 
 

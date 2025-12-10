@@ -85,8 +85,15 @@ public class MultiArrays {
         return arr2;
     }
 
-    public static void shiftRows(int[][] arr, int[][] arr2) {
+    public static void shiftRows(int[][] arr, int reihe, int verschiebungswert) {
+        if (reihe < 0 || reihe > arr.length-1) {
+            System.out.println("Error, Brudi, bist du dumm?");
+        } else {
+            for (int i = 0; i < verschiebungswert; i++) {
+                blatt07.ArbeitMitArrays.shiftLeft(arr[reihe]);
+            }
 
+        }
     }
 
 
