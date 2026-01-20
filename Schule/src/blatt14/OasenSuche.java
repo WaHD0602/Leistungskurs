@@ -45,9 +45,6 @@ public class OasenSuche {
     }
 
     public static void findeWasser(int energy) {
-
-
-
         while (true) {
             //zufallswert von 1-4
             sv.step(spielfeld);
@@ -135,11 +132,11 @@ public class OasenSuche {
         initialisiereSpielfeld(60,60);
         zufallsPositionSpieler();
         sv.step(spielfeld);
-        wasserZufall(0.0003);
+        wasserZufall(0.03);
         sv.step(spielfeld);
         steinZufall(0.15);
         sv.step(spielfeld);
-        findeWasser(5000);
+        findeWasser(50);
         sv.step(spielfeld);
         sv.start();
     }
