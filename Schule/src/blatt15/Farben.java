@@ -20,6 +20,9 @@ public class Farben {
                 spielfeld[i][79] = '8';
             }
         }
+    }
+
+    public static void startPositionen() {
 
     }
 
