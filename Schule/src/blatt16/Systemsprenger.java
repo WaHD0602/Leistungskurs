@@ -6,10 +6,14 @@ public class Systemsprenger {
 
     public static void reinigen() {
         File f = new File("sprengtest");
-        File[] dateien = f.listFiles("sprengtest/Kira.txt"));
+        File[] dateien = f.listFiles();
         if (dateien != null) {
             for (int i = 0; i < dateien.length; i++) {
-                dateien[i].delete();
+                for (int j = 0; j < dateien.length; j++) {
+                    if (dateien[i].getName().startsWith("Kira") && dateien[i].getName().endsWith(".txt")) {
+                     dateien[i].delete();
+                    }
+                }
             }
         }
     }
@@ -34,7 +38,7 @@ public class Systemsprenger {
         }
     }
     public static void main(String[] args) {
-        //sprengen(10);
+        //sprengen(100);
         reinigen();
     }
 }
