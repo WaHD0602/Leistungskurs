@@ -59,6 +59,16 @@ public class MultiArrays {
         return arr;
     }
 
+    public static char[][] createEmpty2DCharArrayNew(int a, int b) {
+        char[][] arr = new char[a][b];
+        for (int i = 0; i < arr.length ; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[i][j] = '0';
+            }
+        }
+        return arr;
+    }
+
     public static boolean istIdentisch(char[][] arr1, char[][] arr2) {
         if (arr1.length != arr2.length) {
             return false;
@@ -80,8 +90,14 @@ public class MultiArrays {
     }
 
     public static char[][] copy2DCharArray(char[][] arr) {
-        char[][] arr2 = arr;
-        print2DArray(arr2);
+        char[][] arr2 = new char[arr.length][arr[0].length];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr2[i][j] = arr[i][j];
+            }
+        }
+
+        //print2DArray(arr2);
         return arr2;
     }
 

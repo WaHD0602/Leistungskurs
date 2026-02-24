@@ -26,9 +26,41 @@ public class Suchkommando {
         }
     }
 
+    public static boolean suchenUndLoeschen(String dateiname, String dateiendung, String pfad) {
+
+        File f = new File(pfad);
+        if (!f.exists()) {
+            return false;
+
+        }
+        if (f.isDirectory()) {
+            File[] inhalt = f.listFiles();
+            if (inhalt != null) {
+                for (File s : inhalt) {
+                    if (s.isFile()) {
+                        if (s.getName().equals(dateiname + dateiendung)) {
+                            if (s.delete()) {
+                                System.out.println("Datei gelöscht: " + s.getAbsolutePath());
+                            } else {
+                                System.out.println("Datei gefunden, aber konnte nicht gelöscht werden!");
+                            }
+                            return true;
+                        }
+                    }
+                    else if (s.isDirectory()) {
+                        if (suchenUndLoeschen(dateiname, dateiendung, s.getAbsolutePath())) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+
 
     public static void main(String[] args) {
-        suchen("Kira1", ".txt", "C:/");
-        System.out.println("Keine Datei mit diesem Namen gefunden!");
+        //suchenUndLoeschen("TDorndiegeileSau", ".txt", "C://");
     }
 }
