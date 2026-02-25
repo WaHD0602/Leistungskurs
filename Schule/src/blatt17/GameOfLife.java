@@ -191,7 +191,7 @@ public class GameOfLife {
     public static void main(String[] args) {
         SchischVisualizer sv = new SchischVisualizer();
         //initRandom(0.2);
-        initOszillierend(8);
+        initOszillierend(7);
         sv.step(spielfeld);
 
         for (int i = 0; i < 500; i++) {
