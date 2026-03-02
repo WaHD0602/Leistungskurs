@@ -158,6 +158,90 @@ public class GameOfLife {
         }
     }
 
+
+    public static void initRaumschiff(int i) {
+        spielfeld = MultiArrays.createEmpty2DCharArrayNew(100,100);
+        int x = spielfeld.length/2;
+        int y = spielfeld[x].length/2;
+        if (i == 1) {
+            spielfeld[x][y] = '9';
+            spielfeld[x+1][y+1] = '9';
+            spielfeld[x+1][y+2] = '9';
+            spielfeld[x][y+2] = '9';
+            spielfeld[x-1][y+2] = '9';
+        }
+        else if (i == 2) {
+            spielfeld[x][y] = '9';
+            spielfeld[x][y+1] = '9';
+            spielfeld[x][y+2] = '9';
+            spielfeld[x-1][y+3] = '9';
+            spielfeld[x-1][y] = '9';
+            spielfeld[x-2][y] = '9';
+            spielfeld[x-3][y] = '9';
+            spielfeld[x][y] = '9';
+            spielfeld[x-4][y+1] = '9';
+            spielfeld[x-4][y+3] = '9';
+        }
+        else if (i == 3) {
+            spielfeld[x][y] = '9';
+            spielfeld[x][y+1] = '9';
+            spielfeld[x][y+2] = '9';
+            spielfeld[x-1][y+3] = '9';
+            spielfeld[x-1][y] = '9';
+            spielfeld[x-1][y] = '9';
+            spielfeld[x-2][y] = '9';
+            spielfeld[x-3][y] = '9';
+            spielfeld[x-5][y+1] = '9';
+            spielfeld[x-5][y+3] = '9';
+            spielfeld[x-4][y] = '9';
+            spielfeld[x-3][y+4] = '9';
+        }
+        else if (i == 4) {
+            spielfeld[x][y] = '9';
+            spielfeld[x][y+1] = '9';
+            spielfeld[x][y+2] = '9';
+            spielfeld[x-1][y+3] = '9';
+            spielfeld[x-1][y] = '9';
+            spielfeld[x-2][y] = '9';
+            spielfeld[x-3][y] = '9';
+            spielfeld[x-4][y] = '9';
+            spielfeld[x-6][y+1] = '9';
+            spielfeld[x-6][y+3] = '9';
+            spielfeld[x-4][y] = '9';
+            spielfeld[x-4][y+4] = '9';
+            spielfeld[x-5][y] = '9';
+            spielfeld[x-3][y+4] = '9';
+        }
+    }
+
+    public static void initChaos(int i) {
+        spielfeld = MultiArrays.createEmpty2DCharArrayNew(100,100);
+        int x = spielfeld.length/2;
+        int y = spielfeld[x].length/2;
+        if (i == 1) {
+            spielfeld[x][y] = '9';
+            spielfeld[x][y+1] = '9';
+            spielfeld[x][y+2] = '9';
+            spielfeld[x][y+4] = '9';
+            spielfeld[x][y+5] = '9';
+            spielfeld[x][y+6] = '9';
+            spielfeld[x+1][y] = '9';
+            spielfeld[x+2][y] = '9';
+            spielfeld[x+2][y+1] = '9';
+            spielfeld[x+2][y+2] = '9';
+            spielfeld[x+2][y+4] = '9';
+            spielfeld[x+2][y+5] = '9';
+            spielfeld[x+2][y+6] = '9';
+            spielfeld[x+1][y+6] = '9';
+        } else if (i == 2) {
+            spielfeld[x][y] = '9';
+            spielfeld[x+1][y] = '9';
+            spielfeld[x+2][y] = '9';
+            spielfeld[x+3][y] = '9';
+            spielfeld[x+4][y] = '9';
+        }
+    }
+
     //to do muss noch initRaumschiff und initChaos
 
     public static void weiter() {
@@ -191,7 +275,7 @@ public class GameOfLife {
     public static void main(String[] args) {
         SchischVisualizer sv = new SchischVisualizer();
         //initRandom(0.2);
-        initOszillierend(7);
+        initChaos(2);
         sv.step(spielfeld);
 
         for (int i = 0; i < 500; i++) {
