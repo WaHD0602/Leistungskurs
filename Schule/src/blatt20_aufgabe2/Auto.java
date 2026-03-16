@@ -2,11 +2,54 @@ package blatt20_aufgabe2;
 
 public class Auto {
 
-    String marke;
-    String modell;
-    int tank;
-    int geschwindigkeit;
-    int kilometerstand;
+    private String marke;
+    private String modell;
+    private int tank;
+    private int geschwindigkeit;
+    private int kilometerstand;
+
+    public int getTank() {
+        return tank;
+    }
+
+    public void setTank(int tank) {
+        this.tank = tank;
+        if (tank < 0) {
+            this.tank = 0;
+        } if (tank > 100) {
+            this.tank = 100;
+        }
+    }
+
+    public int getGeschwindigkeit() {
+        return geschwindigkeit;
+    }
+
+    public void setGeschwindigkeit(int geschwindigkeit) {
+        this.geschwindigkeit = geschwindigkeit;
+        if (geschwindigkeit < 0) {
+            this.geschwindigkeit = 0;
+        } if (geschwindigkeit > 300) {
+            this.geschwindigkeit = 300;
+        }
+    }
+
+    public String getMarke() {
+        return marke;
+    }
+
+    public String getModell() {
+        return modell;
+    }
+
+    public void setKilometerstand(int kilometerstand) {
+        this.kilometerstand = kilometerstand;
+        if (kilometerstand < 0) {
+            this.kilometerstand = 0;
+        }
+    }
+
+
 
     public Auto() {
         marke = "unbekannt";
