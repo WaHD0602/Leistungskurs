@@ -104,4 +104,20 @@ public class Smartphone {
         }
     }
 
+    @Override
+    public boolean equals(Object o) {
+        //Referenzvergleich
+        if (this == o) {
+            return true;
+        }
+        //Typruefung
+        if (o == null || !(o instanceof Smartphone)) {
+            return false;
+        }
+        //Cast
+        Smartphone a = (Smartphone) o;
+        //Attributvergleich
+        return this.marke.equals(a.marke) && this.modell.equals(a.modell);
+    }
+
 }
